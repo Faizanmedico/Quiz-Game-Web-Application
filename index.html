@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Quiz Game</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="start">
+            <h1>Quiz Game</h1>
+            <p>Test your knowledge with this quiz. You'll have 60 seconds to answer as many questions as you can. Incorrect answers will reduce your time by 10 seconds!</p>
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hide">
+            <div class="timer">
+                Time: <span id="time">60</span>
+            </div>
+            <div id="progress"></div>
+            <div id="question-container">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+            <div class="controls">
+                <button id="next-btn" class="btn hide">Next</button>
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="hide">
+            <h1>Quiz Completed!</h1>
+            <div id="score">Your score: <span id="final-score">0</span></div>
+            <form id="submit-score">
+                <label for="initials">Enter initials:</label>
+                <input type="text" id="initials" maxlength="3" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <button id="restart-btn" class="btn">Restart Quiz</button>
+        </div>
+
+        <!-- High Scores Screen -->
+        <div id="high-scores-screen" class="hide">
+            <h1>High Scores</h1>
+            <ol id="high-scores"></ol>
+            <button id="go-home-btn" class="btn">Go Home</button>
+        </div>
+    </div>
+    <script src="myScript.js"></script>
+
+</body>
+</html>
